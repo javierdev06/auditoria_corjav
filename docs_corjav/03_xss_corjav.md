@@ -2,8 +2,8 @@
 
 ## Evidencia
 
-Ejecutado en DVWA (nivel *Low*), módulo **XSS (Reflected)**. En el campo
-"What's your name?" se ingresó: <script>alert('AFP Horizonte - XSS')</script>
+Ejecutado en DVWA (nivel Low), módulo **XSS (Reflected)**. En el campo "What's your name?" se ingresó:  <script>alert('AFP Horizonte - XSS')</script>
+
 
 ![XSS reflejado en DVWA](img_corjav/xss_corjav.png)
 

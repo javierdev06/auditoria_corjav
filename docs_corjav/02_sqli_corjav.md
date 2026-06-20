@@ -2,8 +2,9 @@
 
 ## Evidencia
 
-Ejecutado en DVWA (nivel *Low*), módulo **SQL Injection**. En el campo
-"User ID" se ingresó: ' OR '1'='1
+## Evidencia
+
+Ejecutado en DVWA (nivel Low), módulo **SQL Injection**. En el campo "User ID" se ingresó: ' OR '1'='1
 
 ![Inyección SQL en DVWA](img_corjav/sqli_corjav.png)
 

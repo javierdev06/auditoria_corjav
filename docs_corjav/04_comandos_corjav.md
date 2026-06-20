@@ -1,9 +1,9 @@
 # Ataque 3 — Inyección de comandos
-
 ## Evidencia
 
-Ejecutado en DVWA (nivel *Low*), módulo **Command Injection**. En el campo
-"Enter an IP address" se ingresó: 127.0.0.1; cat /etc/passwd
+Ejecutado en DVWA (nivel Low), módulo **Command Injection**. En el campo "Enter an IP address" se ingresó: 127.0.0.1; cat /etc/passwd
+
+
 
 ![Inyección de comandos en DVWA](img_corjav/comandos_corjav.png)
 

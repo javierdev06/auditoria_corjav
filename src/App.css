@@ -103,11 +103,10 @@ body {
 }
 
 .seccion p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   text-align: left;
   color: #b3c2cf;
 }
-
 .seccion ul {
   margin-bottom: 1rem;
   padding-left: 1.5rem;
@@ -181,4 +180,45 @@ body {
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Forzar alineacion a la izquierda en todo el contenido */
+.contenido,
+.seccion,
+.seccion * {
+  text-align: left;
+}
+
+.seccion pre,
+.seccion pre code {
+  text-align: left;
+  white-space: pre;
+}
+
+.seccion ul {
+  list-style-position: outside;
+}
+
+/* Espaciado compacto y uniforme */
+.seccion > *:first-child {
+  margin-top: 0;
+}
+
+.seccion h2 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.seccion pre {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.seccion ul {
+  margin-top: 0.3rem;
+  margin-bottom: 0.9rem;
+}
+
+.seccion img {
+  margin: 0.8rem 0;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,33 +7,40 @@
 }
 
 body {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
+  background-color: #0f1419;
+  color: #c5d1db;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.7;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(0, 188, 212, 0.05), transparent 55%);
 }
 
 .app {
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
 .header {
-  border-bottom: 2px solid #d32f2f;
-  padding-bottom: 1rem;
+  background-color: #161d26;
+  border: 1px solid #232d3a;
+  border-left: 4px solid #00bcd4;
+  padding: 1.4rem 1.6rem;
   margin-bottom: 1.5rem;
+  border-radius: 8px;
+  animation: fadeDown 0.5s ease;
 }
 
 .header h1 {
-  font-size: 1.8rem;
-  color: #fff;
-  margin-bottom: 0.3rem;
+  font-size: 1.7rem;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
 }
 
 .header p {
-  color: #999;
-  font-size: 0.95rem;
+  color: #7a8a99;
+  font-size: 0.92rem;
 }
 
 .nav {
@@ -42,50 +51,61 @@ body {
 }
 
 .nav-btn {
-  background-color: #2a2a2a;
-  color: #ccc;
-  border: 1px solid #444;
-  padding: 0.5rem 1rem;
+  background-color: #161d26;
+  color: #9fb0bf;
+  border: 1px solid #232d3a;
+  padding: 0.55rem 1.1rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .nav-btn:hover {
-  background-color: #383838;
+  border-color: #00bcd4;
+  color: #00bcd4;
+  transform: translateY(-2px);
 }
 
 .nav-btn.activo {
-  background-color: #d32f2f;
-  color: #fff;
-  border-color: #d32f2f;
+  background-color: #00bcd4;
+  color: #0f1419;
+  border-color: #00bcd4;
+  font-weight: 600;
+  box-shadow: 0 0 14px rgba(0, 188, 212, 0.35);
 }
 
 .contenido {
-  background-color: #222;
-  padding: 2rem;
+  background-color: #161d26;
+  border: 1px solid #232d3a;
+  padding: 2.2rem;
   border-radius: 8px;
+  animation: fadeIn 0.4s ease;
 }
 
 .seccion h1 {
-  font-size: 1.6rem;
-  color: #fff;
+  font-size: 1.55rem;
+  color: #ffffff;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #232d3a;
+  padding-bottom: 0.6rem;
+  font-weight: 700;
 }
 
 .seccion h2 {
-  font-size: 1.25rem;
-  color: #d32f2f;
-  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #00bcd4;
+  margin-top: 1.8rem;
   margin-bottom: 0.7rem;
+  font-weight: 600;
 }
 
 .seccion p {
   margin-bottom: 1rem;
   text-align: left;
+  color: #b3c2cf;
 }
 
 .seccion ul {
@@ -95,39 +115,70 @@ body {
 
 .seccion li {
   margin-bottom: 0.4rem;
+  color: #b3c2cf;
+}
+
+.seccion li::marker {
+  color: #00bcd4;
+}
+
+.seccion strong {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .seccion img {
   max-width: 100%;
-  border: 1px solid #444;
-  border-radius: 6px;
+  border: 1px solid #232d3a;
+  border-radius: 8px;
   margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.seccion img:hover {
+  border-color: #00bcd4;
+  box-shadow: 0 4px 18px rgba(0, 188, 212, 0.2);
 }
 
 .seccion code {
-  background-color: #333;
-  padding: 0.15rem 0.4rem;
+  background-color: #1e2630;
+  padding: 0.15rem 0.45rem;
   border-radius: 4px;
-  font-size: 0.9rem;
-  color: #ff8a80;
+  font-size: 0.88rem;
+  color: #4dd0e1;
+  font-family: 'Consolas', monospace;
 }
 
 .seccion pre {
-  background-color: #2d2d2d;
-  padding: 1rem;
-  border-radius: 6px;
+  background-color: #0a0e13;
+  padding: 1.1rem;
+  border-radius: 8px;
   overflow-x: auto;
   margin-bottom: 1rem;
-  border-left: 3px solid #d32f2f;
+  border: 1px solid #232d3a;
+  border-left: 4px solid #00bcd4;
 }
 
 .seccion pre code {
   background: none;
   padding: 0;
-  color: #d4d4d4;
+  color: #c5d1db;
+  font-family: 'Consolas', monospace;
 }
 
 .seccion em {
-  color: #aaa;
-  font-size: 0.92rem;
+  color: #7a8a99;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

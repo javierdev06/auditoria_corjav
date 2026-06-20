@@ -3,11 +3,14 @@
 ## Evidencia
 
 Ejecutado en DVWA (nivel *Low*), módulo **SQL Injection**. En el campo
-"User ID" se ingresó:
+"User ID" se ingresó: ' OR '1'='1
 
 ![Inyección SQL en DVWA](img_corjav/sqli_corjav.png)
 
-En vez de un usuario, la aplicación devuelve la tabla completa de usuarios.
+*En la imagen se ingresa el payload `' OR '1'='1` en el campo User ID. En lugar
+de un solo usuario, la aplicación devuelve la tabla completa (admin, Gordon
+Brown, Hack Me, Pablo Picasso y Bob Smith), demostrando que se extrajo toda la
+base con una única entrada manipulada.*
 
 ## Por qué funciona
 

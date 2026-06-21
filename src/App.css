@@ -82,7 +82,7 @@ body {
   border: 1px solid #232d3a;
   padding: 2.2rem;
   border-radius: 8px;
-  animation: fadeIn 0.4s ease;
+  animation: aparecer 0.45s ease;
 }
 
 .seccion h1 {
@@ -381,4 +381,42 @@ body {
 @keyframes subir {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animaciones mejoradas */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Las celdas del mapa de calor aparecen con un leve zoom */
+.mapa-calor td {
+  animation: celdaAparece 0.4s ease backwards;
+}
+
+@keyframes celdaAparece {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Las imágenes aparecen suave */
+.seccion img {
+  animation: aparecer 0.5s ease;
+}
+
+/* El header con un leve brillo en el borde al cargar */
+.header {
+  animation: aparecer 0.5s ease;
 }

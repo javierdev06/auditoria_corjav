@@ -2,6 +2,14 @@
 
 Durante esta evaluación utilicé inteligencia artificial como apoyo para construir la aplicación, darle estilo y redactar parte del informe. La herramienta principal fue Claude; también consulté Gemini en algunos puntos y usé la IA de VS Code (Copilot) en el código. En general yo proponía la idea, la estructura o el contexto, y la IA me entregaba el código, los estilos o el borrador, que luego integré, probé y ajusté al caso de AFP Horizonte. Las decisiones finales fueron mías.
 
+## Reutilizar el estilo de la Evaluación 2
+
+**Prompt:** "quiero que esta auditoria use el mismo estilo y las buenas practicas de mi web de la evaluacion 2 de fundamentos de seguridad, como la tarjeta de perfil flotante con mi logo"
+
+**Herramienta:** Claude. **Sección:** App.
+
+**Qué hice yo:** Aporté el código de mi proyecto anterior como referencia y pedí adaptar la tarjeta de perfil flotante a esta auditoría. La IA la ajustó a los colores del nuevo sitio (cian en vez de rojo) y yo la integré, manteniendo las buenas prácticas que ya había validado en la Evaluación 2.
+
 ## Resumen de la empresa
 
 **Prompt:** "te paso el contexto de AFP Horizonte y los datos que custodia (fondos, rut, datos laborales y renta), armame el resumen del informe en base a eso"

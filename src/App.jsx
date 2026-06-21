@@ -6,6 +6,7 @@ import Comandos from './components/Comandos';
 import './App.css';
 import Activos from './components/Activos';
 import Matriz from './components/Matriz';
+import Controles from './components/Controles';
 
 const secciones = [
   { id: 'resumen', nombre: 'Resumen', componente: <Resumen /> },
@@ -14,6 +15,7 @@ const secciones = [
   { id: 'comandos', nombre: 'Inyección de comandos', componente: <Comandos /> },
   { id: 'activos', nombre: 'Activos', componente: <Activos /> },
   { id: 'matriz', nombre: 'Matriz de riesgo', componente: <Matriz /> },
+  { id: 'controles', nombre: 'Controles', componente: <Controles /> },
 ];
 
 function App() {

@@ -4,12 +4,14 @@ import InyeccionSQL from './components/InyeccionSQL';
 import XSS from './components/XSS';
 import Comandos from './components/Comandos';
 import './App.css';
+import Activos from './components/Activos';
 
 const secciones = [
   { id: 'resumen', nombre: 'Resumen', componente: <Resumen /> },
   { id: 'sqli', nombre: 'Inyección SQL', componente: <InyeccionSQL /> },
   { id: 'xss', nombre: 'XSS', componente: <XSS /> },
   { id: 'comandos', nombre: 'Inyección de comandos', componente: <Comandos /> },
+  { id: 'activos', nombre: 'Activos', componente: <Activos /> },
 ];
 
 function App() {

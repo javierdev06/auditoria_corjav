@@ -16,11 +16,10 @@ body {
 }
 
 .app {
-  max-width: 920px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2rem 2.5rem;
 }
-
 .header {
   background-color: #161d26;
   border: 1px solid #232d3a;
@@ -45,20 +44,21 @@ body {
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
   margin-bottom: 2rem;
+  overflow-x: auto;
 }
 
 .nav-btn {
   background-color: #161d26;
   color: #9fb0bf;
   border: 1px solid #232d3a;
-  padding: 0.55rem 1.1rem;
+  padding: 0.4rem 0.7rem;
   border-radius: 6px;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   font-weight: 500;
   transition: all 0.2s ease;
 }

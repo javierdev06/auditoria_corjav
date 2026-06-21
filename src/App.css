@@ -222,3 +222,41 @@ body {
 .seccion img {
   margin: 0.8rem 0;
 }
+
+/* Mapa de calor de la matriz de riesgo */
+.mapa-calor {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.mapa-calor table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+}
+
+.mapa-calor th,
+.mapa-calor td {
+  border: 2px solid #0f1419;
+  padding: 0.9rem 0.6rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.mapa-calor thead th,
+.mapa-calor tbody th {
+  background-color: #161d26;
+  color: #c5d1db;
+  font-weight: 600;
+}
+
+.mapa-calor td {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.leyenda {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #7a8a99;
+}

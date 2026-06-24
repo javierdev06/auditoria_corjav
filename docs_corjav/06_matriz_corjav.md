@@ -14,7 +14,6 @@ El riesgo se calcula como probabilidad × impacto. La probabilidad indica qué t
 
 El siguiente mapa de calor cruza la probabilidad y el impacto de cada hallazgo. Las celdas rojas representan los riesgos que deben atenderse primero; las verdes, los que pueden esperar.
 
-El siguiente mapa de calor cruza la probabilidad y el impacto de cada hallazgo. Las celdas rojas representan los riesgos que deben atenderse primero; las verdes, los que pueden esperar.
 
 *El mapa de calor ubica la inyección SQL y la inyección de comandos en la zona crítica (probabilidad alta, impacto crítico) y el XSS en la zona de riesgo alto (probabilidad media, impacto alto).*
 

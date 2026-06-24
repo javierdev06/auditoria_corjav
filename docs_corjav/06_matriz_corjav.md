@@ -2,13 +2,24 @@
 
 El riesgo de cada vulnerabilidad se calcula como **probabilidad × impacto**. No todas las fallas se corrigen a la vez: la matriz permite ordenar cuáles atender primero según el daño que representan para AFP Horizonte.
 
+## Cómo leer este mapa de calor
+
+El mapa de calor es una forma rápida de ver, de un solo vistazo, qué tan grave es cada problema encontrado. Funciona como una tabla de doble entrada:
+
+- En el eje vertical (izquierda) está la **probabilidad**: qué tan fácil o frecuente es que el problema ocurra, desde "Mínima" (muy raro) hasta "Alta" (ocurre con facilidad).
+- En el eje horizontal (arriba) está el **impacto**: cuánto daño causaría si llega a ocurrir, desde "Bajo" (molesto) hasta "Crítico" (gravísimo para el negocio).
+
+Cada problema se ubica en la celda donde se cruzan su probabilidad y su impacto. El **color** de esa celda resume el riesgo: verde es bajo (puede esperar), amarillo es medio, naranjo es alto y rojo es crítico (hay que atenderlo primero). Mientras más arriba y más a la derecha cae un problema, más rojo y más urgente es.
+
+En esta auditoría, la inyección SQL y la inyección de comandos caen en la esquina roja (probabilidad alta, impacto crítico) porque son fáciles de explotar y comprometen los datos y el servidor de AFP Horizonte. El XSS cae en naranjo (probabilidad media, impacto alto): es serio, pero requiere que la víctima haga clic en un enlace, por lo que ocurre con menos frecuencia.
+
+<!-- MAPA -->
+
 ## Cómo se leen los ejes
 
 **Probabilidad** — qué tan fácil o frecuente es que la falla se explote. Se estima a partir del vector CVSS (sobre todo el vector de ataque `AV`, la complejidad `AC`, los privilegios requeridos `PR` y la interacción del usuario `UI`) y de la exposición del portal. Niveles, de menor a mayor: Mínima, Baja, Media, Alta.
 
 **Impacto** — cuánto daña al negocio si la falla se materializa. Depende del activo afectado y del rubro: en una AFP, que custodia ahorro previsional y datos personales sensibles, el impacto es estructuralmente alto. Niveles, de menor a mayor: Bajo, Medio, Alto, Crítico.
-
-El cruce de ambos ejes ubica cada hallazgo en una celda, cuyo color indica la urgencia: del verde (puede esperar) al rojo (atención inmediata).
 
 ## Ubicación de cada hallazgo
 
@@ -34,7 +45,3 @@ El orden de remediación se desprende de la matriz y es coherente con el CVSS:
 2. **XSS reflejado** (riesgo alto, CVSS 6.1): se atiende a continuación; sigue siendo prioritario, pero su menor probabilidad e impacto acotado lo dejan bajo las dos críticas.
 
 Esta priorización guía el orden en que se aplican los controles de prevención y mitigación del siguiente apartado.
-
-## Mapa de calor
-
-El siguiente mapa de calor cruza la probabilidad (filas) y el impacto (columnas) de cada hallazgo. Las celdas rojas concentran los riesgos que deben atenderse primero; las verdes, los que pueden esperar. Resume de un vistazo la conclusión de esta sección: dos hallazgos en la esquina crítica y uno en la zona de riesgo alto.

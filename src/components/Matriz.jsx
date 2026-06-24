@@ -58,10 +58,12 @@ const ejeTitulo = {
   color: '#6b7280',
 };
 
+const [antes, despues] = contenido.split('<!-- MAPA -->');
+
 function Matriz() {
   return (
     <div>
-      <Seccion contenido={contenido} />
+      <Seccion contenido={antes} />
 
       <div style={{ overflowX: 'auto', margin: '20px 0' }}>
         <div style={{ display: 'flex', alignItems: 'stretch' }}>
@@ -118,6 +120,8 @@ function Matriz() {
           </span>
         </div>
       </div>
+
+      <Seccion contenido={despues} />
     </div>
   );
 }

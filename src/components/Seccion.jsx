@@ -1,9 +1,11 @@
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 function Seccion({ contenido }) {
   return (
     <div className="seccion">
       <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
         components={{
           img: ({ src, alt }) => {
             // Las imágenes en el .md usan ruta relativa (img_corjav/...).

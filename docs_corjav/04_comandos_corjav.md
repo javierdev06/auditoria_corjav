@@ -49,3 +49,14 @@ una IP) y APIs seguras que no invoquen la terminal del sistema.
 Ejecutar la aplicación con **privilegios mínimos** para que, aun si se explota,
 el atacante no pueda acceder a archivos críticos. Complementar con un **WAF** y
 monitoreo que detecte comandos del sistema en las entradas.
+
+
+## Resumen CVSS de los tres ataques
+
+| Ataque | Puntaje CVSS | Severidad |
+|--------|--------------|-----------|
+| Inyección SQL | 9.8 | Crítica |
+| Inyección de comandos | 9.8 | Crítica |
+| XSS (Reflected) | 6.1 | Media |
+
+Los tres se evalúan en la escala CVSS 3.1 (0 a 10). La inyección SQL y la de comandos alcanzan severidad crítica por su impacto total sobre la base de datos y el servidor; el XSS es de severidad media por requerir interacción de la víctima y tener un impacto más acotado.

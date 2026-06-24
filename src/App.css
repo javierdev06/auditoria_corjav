@@ -420,3 +420,28 @@ body {
 .header {
   animation: aparecer 0.5s ease;
 }
+
+/* Tablas en el contenido */
+.seccion table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.seccion th,
+.seccion td {
+  border: 1px solid #232d3a;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+}
+
+.seccion th {
+  background-color: #1e2630;
+  color: #00bcd4;
+  font-weight: 600;
+}
+
+.seccion td {
+  color: #b3c2cf;
+}

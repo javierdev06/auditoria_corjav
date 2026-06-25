@@ -68,3 +68,5 @@ Aplicar una **política CSP (Content Security Policy)** que limite qué scripts
 puede ejecutar el navegador, bloqueando los inyectados. Complementar con el
 uso de cookies de sesión con atributos `HttpOnly` y `Secure` para dificultar
 el robo de sesión.
+
+*Marco de referencia: OWASP Secure Headers Project para la política CSP, y la OWASP Session Management Cheat Sheet para las cookies HttpOnly y Secure.*

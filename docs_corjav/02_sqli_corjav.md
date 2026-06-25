@@ -62,3 +62,5 @@ código. Complementar validando el tipo de entrada (ej. formato de RUT).
 Desplegar un **WAF** que bloquee patrones de inyección y aplicar **mínimo
 privilegio** en la cuenta de base de datos del portal (sin permisos para
 borrar tablas), con monitoreo de consultas anómalas.
+
+*Marco de referencia: NIST SP 800-53, control AC-6 (Least Privilege) para la cuenta de base de datos, y CIS Controls (Seguridad del Software de Aplicaciones) para el WAF y el monitoreo.*

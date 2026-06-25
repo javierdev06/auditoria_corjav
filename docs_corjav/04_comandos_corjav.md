@@ -60,6 +60,8 @@ Ejecutar la aplicación con **privilegios mínimos** para que, aun si se explota
 el atacante no pueda acceder a archivos críticos. Complementar con un **WAF** y
 monitoreo que detecte comandos del sistema en las entradas.
 
+*Marco de referencia: NIST SP 800-53, control AC-6 (Least Privilege) para la ejecución con privilegios mínimos, y CIS Controls para el WAF y el monitoreo de comandos.*
+
 
 ## Resumen CVSS de los tres ataques
 

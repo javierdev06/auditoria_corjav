@@ -35,10 +35,21 @@ inyección SQL: la aplicación mezcla datos del usuario con su propio código.
 - **Puntaje: 6.1 — Media**
 - **Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N**
 
-Se explota por red y sin privilegios, pero requiere interacción de la víctima
-(UI:R), ya que debe abrir el enlace con el payload. El impacto es bajo en
-confidencialidad e integridad y afecta a otro contexto (Scope changed, S:C),
-porque el código corre en el navegador de la víctima, no en el servidor.
+![Cálculo CVSS del XSS reflejado](img_corjav/cvss_xss_corjav.png)
+
+*Cálculo en la calculadora oficial CVSS 3.1 de FIRST: el vector mostrado arroja un puntaje base de 6.1 (Media).*
+
+Cada métrica se marcó según lo observado en el ataque:
+
+- **Attack Vector: Network (AV:N)** — el ataque viaja por internet, en un enlace con el payload.
+- **Attack Complexity: Low (AC:L)** — el payload `<script>alert('AFP Horizonte - XSS')</script>` se ejecuta sin condiciones especiales.
+- **Privileges Required: None (PR:N)** — no se necesita cuenta para enviarlo.
+- **User Interaction: Required (UI:R)** — la víctima debe abrir el enlace para que el script corra. Este paso intermedio es lo que baja el puntaje frente a SQLi y comandos.
+- **Scope: Changed (S:C)** — el código se ejecuta en el navegador de la víctima, un componente distinto del servidor que reflejó la entrada; por eso el alcance cambia.
+- **Confidencialidad e Integridad: Low (C:L/I:L)** — puede robar la sesión o datos visibles, pero el acceso es parcial: no expone toda la base.
+- **Disponibilidad: None (A:N)** — no deja el servicio fuera de línea.
+
+La interacción requerida y el impacto parcial dejan el puntaje en el rango medio: **6.1**.
 
 ## Impacto para AFP Horizonte
 

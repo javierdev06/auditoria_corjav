@@ -26,10 +26,20 @@ instrucción en lugar de como dato.
 - **Puntaje: 9.8 — Crítica**
 - **Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H**
 
-Se explota por red, sin privilegios ni interacción, con impacto alto en las
-tres dimensiones: permite leer, modificar y borrar archivos del servidor. Es
-una de las vulnerabilidades más críticas porque equivale a controlar el
-servidor.
+![Cálculo CVSS de la inyección de comandos](img_corjav/cvss_comandos_corjav.png)
+
+*Cálculo en la calculadora oficial CVSS 3.1 de FIRST: el vector mostrado arroja un puntaje base de 9.8 (Crítica).*
+
+Cada métrica se marcó según lo observado en el ataque:
+
+- **Attack Vector: Network (AV:N)** — el comando se inyecta por internet a través del campo del portal.
+- **Attack Complexity: Low (AC:L)** — el payload `127.0.0.1; cat /etc/passwd` se ejecuta directo, sin condiciones especiales.
+- **Privileges Required: None (PR:N)** — no se requiere cuenta ni permisos previos.
+- **User Interaction: None (UI:N)** — el atacante lo ejecuta solo; ninguna víctima participa.
+- **Scope: Unchanged (S:U)** — el ataque y su impacto ocurren en el mismo servidor del portal.
+- **Confidencialidad, Integridad y Disponibilidad: High (C:H/I:H/A:H)** — permite leer, modificar y borrar archivos, instalar software o dejar el servicio fuera de línea: equivale a controlar el servidor.
+
+Por esa facilidad de explotación e impacto total sobre el servidor, el puntaje llega al rango crítico: **9.8**.
 
 ## Impacto para AFP Horizonte
 

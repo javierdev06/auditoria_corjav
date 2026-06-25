@@ -29,9 +29,20 @@ código algo que debería ser solo dato.
 - **Puntaje: 9.8 — Crítica**
 - **Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H**
 
-Se explota por red, sin privilegios ni interacción, con impacto alto en
-confidencialidad, integridad y disponibilidad: permite leer, modificar y
-borrar toda la base.
+![Cálculo CVSS de la inyección SQL](img_corjav/cvss_sqli_corjav.png)
+
+*Cálculo en la calculadora oficial CVSS 3.1 de FIRST: el vector mostrado arroja un puntaje base de 9.8 (Crítica).*
+
+Cada métrica se marcó según lo observado en el ataque:
+
+- **Attack Vector: Network (AV:N)** — el portal se ataca por internet, sin acceso físico ni local.
+- **Attack Complexity: Low (AC:L)** — el payload `' OR '1'='1` funciona al primer intento, sin condiciones especiales.
+- **Privileges Required: None (PR:N)** — no se necesita una cuenta ni permisos previos para enviarlo.
+- **User Interaction: None (UI:N)** — el atacante lo ejecuta solo; ninguna víctima debe hacer nada.
+- **Scope: Unchanged (S:U)** — el daño queda dentro del mismo componente: la base de datos del portal.
+- **Confidencialidad, Integridad y Disponibilidad: High (C:H/I:H/A:H)** — permite leer, modificar y borrar toda la base de afiliados.
+
+La combinación de máxima facilidad de explotación e impacto total en las tres dimensiones lleva el puntaje al rango crítico: **9.8**.
 
 ## Impacto para AFP Horizonte
 

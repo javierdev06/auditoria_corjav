@@ -88,7 +88,7 @@ function Matriz() {
                       const nivel = nivelRiesgo(prob, imp);
                       const items = hallazgos[`${prob}-${imp}`];
                       return (
-                        <td key={imp} style={{ background: colores[nivel], color: '#1f2a37', textAlign: 'center', verticalAlign: 'middle', padding: '14px 6px', border: '3px solid #ffffff', fontWeight: 700, fontSize: '0.82rem' }}>
+                        <td key={imp} style={{ background: colores[nivel], color: '#1f2a37', textAlign: 'center', verticalAlign: 'middle', height: '78px', padding: '6px', border: '3px solid #ffffff', fontWeight: 700, fontSize: '0.82rem' }}>
                           {nivel}
                           {items && (
                             <div>
@@ -114,10 +114,7 @@ function Matriz() {
               {n}
             </span>
           ))}
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-            <span style={{ ...chip, margin: 0 }}>SQLi</span>
-            ubicación de cada hallazgo
-          </span>
+          
         </div>
       </div>
 

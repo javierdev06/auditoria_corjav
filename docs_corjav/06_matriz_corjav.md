@@ -15,6 +15,12 @@ En esta auditoría, la inyección SQL y la inyección de comandos caen en la esq
 
 <!-- MAPA -->
 
+**Lectura del mapa para esta auditoría:**
+
+- **Inyección SQL** y **inyección de comandos** quedan en la esquina superior derecha (probabilidad Alta × impacto Crítico), la celda roja. Ahí porque se explotan sin privilegios ni interacción de la víctima —son muy probables— y comprometen la base de datos completa y el servidor del portal —impacto máximo—. Son los dos riesgos a atender primero.
+- **XSS** queda una fila más abajo y una columna a la izquierda (probabilidad Media × impacto Alto), la celda naranja. Baja a probabilidad Media porque necesita que la víctima abra un enlace, y su impacto es Alto pero no Crítico, ya que afecta a un afiliado a la vez y no expone toda la base.
+- Las celdas verdes y amarillas quedan vacías: en esta auditoría no se encontraron hallazgos de riesgo bajo o medio. Todos los hallazgos cayeron en la zona alta o crítica, lo que confirma la gravedad del estado actual del portal.
+
 ## Cómo se leen los ejes
 
 **Probabilidad** — qué tan fácil o frecuente es que la falla se explote. Se estima a partir del vector CVSS (sobre todo el vector de ataque `AV`, la complejidad `AC`, los privilegios requeridos `PR` y la interacción del usuario `UI`) y de la exposición del portal. Niveles, de menor a mayor: Mínima, Baja, Media, Alta.

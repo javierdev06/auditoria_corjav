@@ -20,12 +20,8 @@ Las tres comparten una misma causa raíz: la aplicación no separa los datos que
 
 ## Conclusión de riesgo y medidas
 
-Al cruzar probabilidad e impacto en la matriz de riesgo, la inyección SQL y la inyección de comandos resultan de riesgo crítico, y el XSS de riesgo alto. Por eso se priorizan las dos primeras para atención inmediata. Para cada hallazgo se proponen medidas de prevención que atacan la causa raíz, controles de mitigación que reducen el daño residual —apoyados en marcos como OWASP, CIS y NIST— y un plan de recuperación ante desastres para el caso en que un ataque llegue a concretarse.
+La auditoría identificó y clasificó cinco activos de información del portal —entre ellos la base de datos de afiliados, los fondos previsionales y el servidor—, asociando cada vulnerabilidad al activo que pone en riesgo. Al cruzar probabilidad e impacto en la matriz de riesgo, la inyección SQL y la inyección de comandos resultan de riesgo crítico, y el XSS de riesgo alto; por eso se priorizan las dos primeras para atención inmediata. Para cada hallazgo se proponen medidas de prevención que atacan la causa raíz y controles de mitigación que reducen el daño residual, apoyados en marcos como OWASP, CIS y NIST. Como mejora tecnológica de fondo se plantea un WAF y la segmentación de red, y se complementa con un plan de recuperación ante desastres para el caso en que un ataque llegue a concretarse.
 
 ## Contenido de esta auditoría
 
 Esta auditoría se organiza en secciones navegables: el análisis detallado de cada ataque (evidencia, mecanismo, CVSS y defensa), los activos de información del portal, la matriz de riesgo con su mapa de calor, los controles de prevención y mitigación, el plan de recuperación ante desastres, y la bitácora de uso de inteligencia artificial durante el desarrollo del trabajo.
-
-Por qué este resumen suma para el 7: ya no es solo "qué es la empresa", sino un resumen ejecutivo completo. En cinco bloques cubre la empresa y su portal (con la Ley 19.628), el alcance y el marco ético-legal (DVWA como sustituto, Ley 21.459, las fases de auditoría), los tres hallazgos con su CVSS, la conclusión de riesgo conectada a la matriz, y una guía de las secciones. Quien lo lea entiende toda la auditoría de una, y refuerza la impresión de calidad analítica que el profe valora en todos los criterios.
-
-Guarda, entra a **Resumen** y revisa que se vea con sus subtítulos y la lista de hallazgos. Si te gusta, commit:

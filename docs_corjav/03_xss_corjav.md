@@ -2,14 +2,12 @@
 
 ## Evidencia
 
-Ejecutado en DVWA (nivel Low), módulo **XSS (Reflected)**. En el campo "What's your name?" se ingresó:  <script>alert('AFP Horizonte - XSS')</script>
+Ejecutado en DVWA (nivel Low), módulo **XSS (Reflected)**. En el campo "What's your name?" se ingresó:  <script>alert('Alerta de seguridad: verifique sus datos para no perder acceso')</script>
 
 
 ![XSS reflejado en DVWA](img_corjav/xss_corjav.png)
 
-*En la imagen, la entrada se interpreta como código y el navegador ejecuta el
-script, mostrando un popup con el mensaje "AFP Horizonte - XSS". En la URL se
-observa el payload inyectado, confirmando que el código se reflejó y ejecutó.*
+*En la imagen, la entrada se interpreta como código y el navegador ejecuta el script, mostrando un popup con el mensaje "Alerta de seguridad: verifique sus datos para no perder acceso". Este mensaje simula una alerta fraudulenta que suplanta a la AFP para inducir al afiliado a entregar sus credenciales. En la URL se observa el payload inyectado, confirmando que el código se reflejó y ejecutó.*
 
 ## Por qué funciona
 
@@ -17,13 +15,13 @@ La aplicación inserta la entrada del usuario dentro del HTML sin sanitizarla.
 Una entrada normal:
 
 ```html
-<p>Hola Pedro</p>
+<p>Hola Profe Ruben</p>
 ```
 
 Una entrada maliciosa con una etiqueta script:
 
 ```html
-<p>Hola <script>alert('AFP Horizonte - XSS')</script></p>
+<p>Hola <script>alert('Alerta de seguridad: verifique sus datos para no perder acceso')</script></p>
 ```
 
 El navegador no distingue entre el contenido propio de la página y la entrada
@@ -42,7 +40,7 @@ inyección SQL: la aplicación mezcla datos del usuario con su propio código.
 Cada métrica se marcó según lo observado en el ataque:
 
 - **Attack Vector: Network (AV:N)** — el ataque viaja por internet, en un enlace con el payload.
-- **Attack Complexity: Low (AC:L)** — el payload `<script>alert('AFP Horizonte - XSS')</script>` se ejecuta sin condiciones especiales.
+- **Attack Complexity: Low (AC:L)** — el payload `<script>alert('Alerta de seguridad: verifique sus datos para no perder acceso')</script>` se ejecuta sin condiciones especiales.
 - **Privileges Required: None (PR:N)** — no se necesita cuenta para enviarlo.
 - **User Interaction: Required (UI:R)** — la víctima debe abrir el enlace para que el script corra. Este paso intermedio es lo que baja el puntaje frente a SQLi y comandos.
 - **Scope: Changed (S:C)** — el código se ejecuta en el navegador de la víctima, un componente distinto del servidor que reflejó la entrada; por eso el alcance cambia.

@@ -390,3 +390,22 @@ body {
 :root[data-theme="oscuro"] .seccion { color: #c2cbd6; }
 :root[data-theme="oscuro"] .demo > h3 { color: #f1f5f9; }
 :root[data-theme="oscuro"] .demo > p { color: #c2cbd6 !important; }
+
+.perfil {
+  display: flex;
+  justify-content: center;
+  margin: 0 12px 14px;
+}
+.perfil-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.perfil-logo:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.4);
+}

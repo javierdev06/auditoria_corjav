@@ -9,6 +9,7 @@ import Matriz from './components/Matriz';
 import Controles from './components/Controles';
 import Recuperacion from './components/Recuperacion';
 import Prompts from './components/Prompts';
+import logito from './assets/logito.png';
 import './App.css';
 
 const secciones = [
@@ -49,6 +50,10 @@ function App() {
             <button key={s.id} className={activa === s.id ? 'nav-btn activo' : 'nav-btn'} onClick={() => setActiva(s.id)}>{s.icono}<span>{s.nombre}</span></button>
           ))}
         </nav>
+
+        <a className="perfil" href="https://github.com/javierdev06/auditoria_corjav" target="_blank" rel="noopener noreferrer">
+          <img src={logito} alt="Logo de Javier Cortés" className="perfil-logo" />
+        </a>
 
         <button className="tema-btn" onClick={() => setTema(tema === 'claro' ? 'oscuro' : 'claro')}>
           {tema === 'claro' ? <Moon size={18} strokeWidth={1.75} /> : <Sun size={18} strokeWidth={1.75} />}

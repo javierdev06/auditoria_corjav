@@ -146,6 +146,78 @@ Durante esta evaluación utilicé inteligencia artificial como apoyo para constr
 
 **Qué hice yo:** Di la idea de poner el logo enlazado a mi repo y la IA me ayudó con el código. Lo integré y verifiqué que el enlace funcionara.
 
+## Cambio completo del estilo de la página
+
+**Prompt:** "quiero cambiar el estilo completo de la pagina, saquemos el diseño oscuro con cian y pasemos a algo mas profesional tipo dashboard, con una barra lateral a la izquierda para navegar entre las secciones"
+
+**Herramienta:** Claude. **Sección:** App.
+
+**Qué hice yo:** Decidí cambiar toda la dirección visual del sitio. La IA me entregó el nuevo layout con barra lateral y tarjetas claras, y yo lo integré, elegí los íconos de cada sección y ajusté los colores.
+
+## Matriz de riesgo 4x4
+
+**Prompt:** "necesito armar una matriz de riesgo de 4x4 tipo mapa de calor, que cruce probabilidad e impacto y muestre donde cae cada hallazgo (sqli, xss, comandos), con su leyenda de colores"
+
+**Herramienta:** Claude. **Sección:** 06_matriz.
+
+**Qué hice yo:** Definí yo dónde caía cada ataque y los niveles de color. La IA generó el componente y yo corregí los colores y dejé las celdas parejas.
+
+## Capturas y desglose CVSS
+
+**Prompt:** "agreguemos en cada ataque la captura de la calculadora cvss de first y expliquemos metrica por metrica (av, ac, pr, ui, s, c, i, a) por que se llega a ese puntaje"
+
+**Herramienta:** Claude. **Sección:** 02_sqli, 03_xss, 04_comandos.
+
+**Qué hice yo:** Marqué yo las métricas en la calculadora oficial y tomé las capturas. La IA me ayudó a redactar la justificación de cada métrica.
+
+## Inventario de activos clasificado
+
+**Prompt:** "mejora la seccion de activos para que sea un inventario clasificado: cada activo con su nivel de criticidad, la propiedad de la cia que afecta y su amenaza, mas una tabla resumen"
+
+**Herramienta:** Claude. **Sección:** 05_activos.
+
+**Qué hice yo:** Identifiqué los activos de la AFP y la IA me ayudó a clasificarlos y armar la tabla. Revisé que cada uno se relacionara con su ataque.
+
+## Solución de remediación y tiempos de recuperación
+
+**Prompt:** "en la seccion de recuperacion quiero agregar la solucion de remediacion con el codigo corregido de cada ataque (consultas parametrizadas, htmlspecialchars, validacion de ip) y definir los tiempos de recuperacion rto y rpo"
+
+**Herramienta:** Claude. **Sección:** 08_recuperacion.
+
+**Qué hice yo:** Pedí incluir la solución que arregla cada falla y los tiempos objetivo. La IA me dio el código corregido y el borrador, y yo definí el RPO de 1 hora y el RTO de 4 horas según el caso de una AFP.
+
+## Demostración interactiva por ataque
+
+**Prompt:** "quiero una demostracion interactiva dentro de cada ataque, donde el profesor apriete un boton probar ataque y vea el mismo resultado de mis capturas, mas un boton para aplicar la solucion, todo simulado sin ejecutar nada real"
+
+**Herramienta:** Claude. **Sección:** 02_sqli, 03_xss, 04_comandos.
+
+**Qué hice yo:** Di la idea de que el profesor pudiera probar cada ataque de forma segura. La IA armó las demos simuladas con el resultado de mis capturas, y yo verifiqué que coincidieran y que no ejecutaran nada real.
+
+## Modo claro y oscuro
+
+**Prompt:** "agrega un boton de modo claro y oscuro en la barra lateral, con iconos de sol y luna, y que recuerde la eleccion al recargar la pagina"
+
+**Herramienta:** Claude. **Sección:** App.
+
+**Qué hice yo:** Pedí el interruptor de tema con sol y luna. La IA me dio la lógica y los estilos, y yo ajusté los colores para que todos los textos se leyeran bien en ambos modos.
+
+## Resaltado de sintaxis en el código
+
+**Prompt:** "quiero que los bloques de codigo tengan resaltado de sintaxis con colores por tipo de palabra, en vez de verse como texto plano de un solo color"
+
+**Herramienta:** Claude. **Sección:** App.
+
+**Qué hice yo:** Pedí que el código se viera como en un editor. La IA me indicó el plugin y el ajuste del componente, y yo lo instalé y lo probé en todas las secciones.
+
+## Tarjeta de perfil con logo
+
+**Prompt:** "quiero reponer la tarjeta de perfil con mi logo en el sitio, ahora adaptada al diseño nuevo con barra lateral"
+
+**Herramienta:** Claude. **Sección:** App.
+
+**Qué hice yo:** Pedí recuperar mi tarjeta de perfil con el logo dentro del nuevo diseño. La IA me ayudó a ubicarla y darle estilo acorde al dashboard, y yo verifiqué que se viera bien en ambos modos.
+
 ## Reflexión final
 
 En la mayoría de las secciones yo aportaba la idea, la estructura o el contexto de AFP Horizonte, y la IA me entregaba el código, los estilos o el borrador del texto. A partir de ahí integraba, probaba y ajustaba: recorté textos, corregí colores, verifiqué todos los CVSS en la calculadora oficial y adapté cada parte al rubro previsional. Usar Claude como herramienta principal, Gemini como contraste y la IA de VS Code para el código me permitió comparar enfoques. Aprendí que la IA acelera el trabajo, pero la responsabilidad de revisar y ajustar lo entregado, especialmente para que el código no quede vulnerable, fue mía.

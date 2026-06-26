@@ -10,10 +10,10 @@ const demoWrap = { marginTop: '28px', paddingTop: '20px', borderTop: '1px solid 
 function DemoComandos() {
   const [vista, setVista] = useState('none');
   return (
-    <div style={demoWrap}>
+    <div className="demo" style={demoWrap}>
       <h3 style={{ margin: '0 0 6px' }}>Demostración interactiva</h3>
-      <p style={{ margin: '0 0 12px', color: '#374151', lineHeight: 1.6 }}>Reproduce el ataque con la misma entrada usada en DVWA. Es una simulación controlada: no se ejecuta ningún comando real sobre este sitio.</p>
-      <p style={{ margin: '0 0 2px', fontSize: '0.78rem', color: '#6b7280', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Entrada del atacante</p>
+      <p className="demo-desc" style={{ margin: '0 0 12px', color: '#374151', lineHeight: 1.6 }}>Reproduce el ataque con la misma entrada usada en DVWA. Es una simulación controlada: no se ejecuta ningún comando real sobre este sitio.</p>
+      <p className="demo-label" style={{ margin: '0 0 2px', fontSize: '0.78rem', color: '#6b7280', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Entrada del atacante</p>
       <div style={boxCode}>127.0.0.1; cat /etc/passwd</div>
       <div style={{ marginTop: '14px' }}>
         <button className="demo-btn" style={boton('#dc2626')} onClick={() => setVista('ataque')}>Probar ataque</button>

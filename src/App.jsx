@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { FileText, Database, Code, Terminal, Server, LayoutGrid, ShieldCheck, RefreshCw, Bot } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { FileText, Database, Code, Terminal, Server, LayoutGrid, ShieldCheck, RefreshCw, Bot, Sun, Moon } from 'lucide-react';
 import Resumen from './components/Resumen';
 import InyeccionSQL from './components/InyeccionSQL';
 import XSS from './components/XSS';
@@ -24,8 +24,15 @@ const secciones = [
 ];
 
 function App() {
+  
   const [activa, setActiva] = useState('resumen');
   const seccionActual = secciones.find((s) => s.id === activa);
+  const [tema, setTema] = useState(() => localStorage.getItem('tema') || 'claro');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', tema);
+    localStorage.setItem('tema', tema);
+  }, [tema]);
 
   return (
     <div className="app">
@@ -42,6 +49,11 @@ function App() {
             <button key={s.id} className={activa === s.id ? 'nav-btn activo' : 'nav-btn'} onClick={() => setActiva(s.id)}>{s.icono}<span>{s.nombre}</span></button>
           ))}
         </nav>
+
+        <button className="tema-btn" onClick={() => setTema(tema === 'claro' ? 'oscuro' : 'claro')}>
+          {tema === 'claro' ? <Moon size={18} strokeWidth={1.75} /> : <Sun size={18} strokeWidth={1.75} />}
+          <span>{tema === 'claro' ? 'Modo oscuro' : 'Modo claro'}</span>
+        </button>
       </aside>
 
       <main className="main">

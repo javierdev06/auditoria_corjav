@@ -11,6 +11,9 @@ Ejecutado en DVWA (nivel Low), módulo **Command Injection**. En el campo "Enter
 el contenido de /etc/passwd, listando las cuentas de usuario del sistema. Esto
 confirma que se ejecutó un comando del sistema operativo a través del campo.*
 
+
+<!-- DEMO -->
+
 ## Por qué funciona
 
 La aplicación arma un comando del sistema usando la entrada del usuario: ping -c 4 127.0.0.1

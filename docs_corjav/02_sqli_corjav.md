@@ -11,6 +11,8 @@ de un solo usuario, la aplicación devuelve la tabla completa (admin, Gordon
 Brown, Hack Me, Pablo Picasso y Bob Smith), demostrando que se extrajo toda la
 base con una única entrada manipulada.*
 
+<!-- DEMO -->
+
 ## Por qué funciona
 
 La aplicación arma la consulta concatenando el texto del usuario:

@@ -9,6 +9,9 @@ Ejecutado en DVWA (nivel Low), módulo **XSS (Reflected)**. En el campo "What's 
 
 *En la imagen, la entrada se interpreta como código y el navegador ejecuta el script, mostrando un popup con el mensaje "Alerta de seguridad: verifique sus datos para no perder acceso". Este mensaje simula una alerta fraudulenta que suplanta a la AFP para inducir al afiliado a entregar sus credenciales. En la URL se observa el payload inyectado, confirmando que el código se reflejó y ejecutó.*
 
+
+<!-- DEMO -->
+
 ## Por qué funciona
 
 La aplicación inserta la entrada del usuario dentro del HTML sin sanitizarla.

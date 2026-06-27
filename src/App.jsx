@@ -28,6 +28,9 @@ function App() {
   
   const [activa, setActiva] = useState('resumen');
   const [perfilAbierto, setPerfilAbierto] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activa]);
   const seccionActual = secciones.find((s) => s.id === activa);
   const [tema, setTema] = useState(() => localStorage.getItem('tema') || 'claro');
 

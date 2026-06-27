@@ -396,6 +396,19 @@ body {
   justify-content: center;
   margin: 0 12px 14px;
 }
+.perfil {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 12px 14px;
+}
+.perfil-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
 .perfil-logo {
   width: 64px;
   height: 64px;
@@ -405,7 +418,76 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.18);
   transition: transform 0.15s ease, border-color 0.15s ease;
 }
-.perfil-logo:hover {
+.perfil-btn:hover .perfil-logo {
   transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+.perfil-card {
+  position: absolute;
+  bottom: 78px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background: #1e2940;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  animation: perfilIn 0.22s ease;
+  z-index: 20;
+}
+.perfil-card::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 14px;
+  height: 14px;
+  background: #1e2940;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.perfil-card-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.perfil-card-nombre {
+  color: #f1f5f9;
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin: 10px 0 2px;
+}
+.perfil-card-handle {
+  color: #93a0b2;
+  font-size: 0.8rem;
+  margin: 0 0 12px;
+}
+.perfil-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.perfil-card-link:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+@keyframes perfilIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
